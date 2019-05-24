@@ -21,17 +21,8 @@ namespace Datos
 
         public bool Conectar()
         {
-            //string sConexionMysql;
             bool estado = false;
-            //if (StringConexion.Trim() == "" )
-            //{
-            //    sConexionMysql = "server = pcl-pc;user id = atc;password = 123atc;port = 3306;database = packing5";
-            //    //sConexionMysql = "server = localhost;user id = admin;password = 57706897;port = 3306;database = packing";
-            //}
-            //else
-            //{
-            //    sConexionMysql = StringConexion;
-            //}
+
             try
             {
                 MySQLConexion = new MySqlConnection();

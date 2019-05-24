@@ -85,6 +85,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{2FFD519E-1695-42F5-B42E-91AA1B03EA12}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Negocio\Negocio.csproj">
       <Project>{0da08a9c-bb59-4ec3-8f64-65ba1dce5e08}</Project>
       <Name>Negocio</Name>
@@ -99,6 +103,16 @@
     <None Include="Resources\airwaybill.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons8-delete-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons8-plus-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

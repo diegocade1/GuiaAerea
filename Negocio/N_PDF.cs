@@ -33,32 +33,45 @@ namespace Negocio
                         // step 3
                         document.Open();
                         // step 4
-                        // Create and add an Image
+                        // Pie
+                        string[] pie = new string[] { "Original 2 (For Consignee)","Copy 4 (Delivery Receipt)","Original 3 (For Shipper)","Copy 9 (For Agent)","Copy 10 (Extra Copy For Carrier)",
+                        "Copy 11 (Extra Copy For Carrier)","Original 1 (For Issuing Carrier)", "Copy 8 (For First Carrier)", "Copy 7 (For Second Carrier)", "Copy 6 (For Third Carrier)",
+                        "Copy 5 (For Airport of Destination)"};
+
+                        //1ra Imagen
                         Image img = Image.GetInstance(Path.Combine(
                           RESOURCE, "airwaybill.jpg"
                         ));
 
-                        //img.ScaleAbsolute(PageSize.A4.Width - 5, PageSize.A4.Height - 20);
                         img.ScaleAbsolute(PageSize.A4.Width - 40, PageSize.A4.Height - 40);
                         img.Alignment = Element.ALIGN_CENTER;
                         img.SetAbsolutePosition(30f, 65f);
                         img.RotationDegrees=0.1f;
-                        document.Add(img);
-                        // Add text on top of the image
+                        
+                        // Para añadir text encima de la imagen
                         PdfContentByte over = writer.DirectContent;
-                        Text(over);
-                        // 2nd page
-                        document.NewPage();
+                        
+                        // 2nd Imagen
+                        
                         Image img2 = Image.GetInstance(Path.Combine(  
                             RESOURCE, "pagina 2.png"
                             ));
-
-                        //img.ScaleAbsolute(PageSize.A4.Width - 5, PageSize.A4.Height - 20);
                         img2.ScaleAbsolute(PageSize.A4.Width - 10, PageSize.A4.Height - 30);
                         img2.Alignment = Element.ALIGN_CENTER;
-                        //img2.SetAbsolutePosition(30f, 65f);
-                        //img2.RotationDegrees = 0.1f;
-                        document.Add(img2);
+                        
+                        // Paginas
+                        for(int index = 0; index<pie.Length;index++)
+                        {
+                            if(index>0)
+                            {
+                                document.NewPage();
+                            }
+                            document.Add(img);
+                            Text(over,pie[index]);
+                            document.NewPage();
+                            document.Add(img2);
+                        }
+
                         document.Close();
                     }
                     bytesarray = stream.ToArray();
@@ -72,7 +85,7 @@ namespace Negocio
             }           
         }
 
-        private void Text (PdfContentByte writer)
+        private void Text (PdfContentByte writer , string pie)
         {
 
             //Font
@@ -376,7 +389,15 @@ namespace Negocio
 
             bf = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
             over.SetFontAndSize(bf, 10);
-            over.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "ORIGINAL 2 (FOR CONSIGNEE)", 240f, Y, 0f);
+            if(pie.Length>26)
+            {
+                over.ShowTextAligned(PdfContentByte.ALIGN_LEFT, pie.ToUpper(), 216f, Y, 0f);
+            }
+            else
+            {
+                over.ShowTextAligned(PdfContentByte.ALIGN_LEFT, pie.ToUpper(), 240f, Y, 0f);
+            }
+            
             #endregion
 
             over.EndText();
