@@ -24,6 +24,10 @@ namespace Emision_de_Guia_Aerea
         private void frmEmisionGuiaEmbarqueAerea_Load(object sender, EventArgs e)
         {
             dataGridViewDatos.Rows.Add();
+            
+            btnAgregarRow.Visible = false;
+            btnBorrarRow.Visible = false;
+            
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -31,7 +35,7 @@ namespace Emision_de_Guia_Aerea
             N_PDF pdf = new N_PDF();
 
             E_Guide guide = new E_Guide();
-            guide.Aerial_guide = txtAirlineCode.Text;
+            guide.Airline_Code = txtAirlineCode.Text;
             guide.Aerial_guide = txtGuide.Text;
             guide.ID_Guide_Type = "";
 
@@ -114,7 +118,7 @@ namespace Emision_de_Guia_Aerea
             third.Telephone = "";
 
             string flight_number = txtNumeroVuelo.Text;
-            string flight_date = dtpFechaVuelo.Text;
+            string flight_date = dtpFechaVuelo.Value.ToString("yyyy-MM-dd");
 
             E_Currency currency = new E_Currency();
             currency.Clp_value = "";
@@ -147,7 +151,7 @@ namespace Emision_de_Guia_Aerea
             string total_collect_charges = txtTotalCollectCharges.Text;
 
             string shipper_signature = txtSignatureShipper.Text;
-            string executed_date = dtpExecutedDate.Text;
+            string executed_date = dtpExecutedDate.Value.ToString("yyyy-MM-dd");
             string at_place = txtAtPlace.Text;
             string signature_issuing_carrier_agent = txtSignatureIssuingCarrierAgent.Text;
 
@@ -155,6 +159,7 @@ namespace Emision_de_Guia_Aerea
             try
             {
                 pdf.GenerarPDF();
+                MessageBox.Show(pdf.FILENAME + " ha sido generado en: " + pdf.DIR);
             }
             catch(Exception ex)
             {
@@ -216,12 +221,12 @@ namespace Emision_de_Guia_Aerea
                 double subtotal = TryParse(IsStringNullorEmpty(dataGridViewDatos.Rows[e.RowIndex].Cells[colTotal.Index].Value));
                 if ( subtotal > 0)
                 {
-                    tempTotal -= subtotal;
-                    dataGridViewDatos.Rows[e.RowIndex].Cells[colTotal.Index].Value = operation;
+                    tempTotal -= TryParse(String.Format("{0:0.00}", subtotal));
+                    dataGridViewDatos.Rows[e.RowIndex].Cells[colTotal.Index].Value = TryParse(String.Format("{0:0.00}",operation));
                 }
                 else
                 {
-                    dataGridViewDatos.Rows[e.RowIndex].Cells[colTotal.Index].Value = operation;
+                    dataGridViewDatos.Rows[e.RowIndex].Cells[colTotal.Index].Value = TryParse(String.Format("{0:0.00}", operation));
                 }            
             }
 
@@ -233,7 +238,7 @@ namespace Emision_de_Guia_Aerea
                     subtotal += TryParse(IsStringNullorEmpty(row.Cells[colTotal.Index].Value));                                    
                 }
 
-                tempTotal = subtotal;
+                tempTotal = TryParse(String.Format("{0:0.00}", subtotal));
                 txtWeightCharge.Text = tempTotal.ToString();
             }
         }
@@ -258,7 +263,6 @@ namespace Emision_de_Guia_Aerea
 
         private void dataGridViewDatos_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
-            //if (dataGridViewDatos.CurrentCell.ColumnIndex == colNum_Pieces.Index || dataGridViewDatos.CurrentCell.ColumnIndex == colPesoBruto.Index || dataGridViewDatos.CurrentCell.ColumnIndex == colRate_Charge.Index) //Desired Column
             if (dataGridViewDatos.CurrentCell.ColumnIndex == colNum_Pieces.Index)
             { 
                 TextBox tb = e.Control as TextBox;
@@ -294,7 +298,6 @@ namespace Emision_de_Guia_Aerea
                     tb3.KeyPress += new KeyPressEventHandler(DGVTextTextBox_KeyPress);
                 }
             }
-
         }
 
         private void btnAgregarRow_Click(object sender, EventArgs e)

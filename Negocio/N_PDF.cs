@@ -14,11 +14,12 @@ namespace Negocio
     public class N_PDF
     {
         /** The filename of the PDF */
-        public const String FILENAME = "Guide.pdf";
+        public string DIR = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) ;
+        public string FILENAME = "Guide.pdf";
 
         public void GenerarPDF()
         {
-            string dir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + Path.DirectorySeparatorChar+ FILENAME;
+            string path = DIR + Path.DirectorySeparatorChar + FILENAME;
             byte[] bytesarray = null;
             string RESOURCE = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "Resources");
             using (var stream = new MemoryStream())
@@ -51,7 +52,7 @@ namespace Negocio
                         // Para añadir text encima de la imagen
                         PdfContentByte over = writer.DirectContent;
                         
-                        // 2nd Imagen
+                        // 2da Imagen
                         
                         Image img2 = Image.GetInstance(Path.Combine(  
                             RESOURCE, "pagina 2.png"
@@ -77,7 +78,7 @@ namespace Negocio
                     bytesarray = stream.ToArray();
                     stream.Close();
 
-                    using (FileStream fs = File.Create(dir))
+                    using (FileStream fs = File.Create(path))
                     {
                         fs.Write(bytesarray, 0, (int)bytesarray.Length);
                     }

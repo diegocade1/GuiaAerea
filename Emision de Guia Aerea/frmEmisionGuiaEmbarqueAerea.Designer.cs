@@ -177,8 +177,8 @@
             this.colPesoCobrable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRate_Charge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAgregarRow = new System.Windows.Forms.Button();
             this.btnBorrarRow = new System.Windows.Forms.Button();
+            this.btnAgregarRow = new System.Windows.Forms.Button();
             this.panelExportador.SuspendLayout();
             this.panelConsignatario.SuspendLayout();
             this.panelNotify.SuspendLayout();
@@ -771,7 +771,7 @@
             // 
             // dtpFechaVuelo
             // 
-            this.dtpFechaVuelo.CustomFormat = "yyyy-mm-dd";
+            this.dtpFechaVuelo.CustomFormat = "\"u\"";
             this.dtpFechaVuelo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaVuelo.Location = new System.Drawing.Point(390, 92);
             this.dtpFechaVuelo.Name = "dtpFechaVuelo";
@@ -1558,6 +1558,20 @@
             this.colTotal.Name = "colTotal";
             this.colTotal.ReadOnly = true;
             // 
+            // btnBorrarRow
+            // 
+            this.btnBorrarRow.FlatAppearance.BorderSize = 0;
+            this.btnBorrarRow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
+            this.btnBorrarRow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RosyBrown;
+            this.btnBorrarRow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrarRow.Image = global::Emision_de_Guia_Aerea.Properties.Resources.icons8_delete_48;
+            this.btnBorrarRow.Location = new System.Drawing.Point(861, 61);
+            this.btnBorrarRow.Name = "btnBorrarRow";
+            this.btnBorrarRow.Size = new System.Drawing.Size(43, 41);
+            this.btnBorrarRow.TabIndex = 102;
+            this.btnBorrarRow.UseVisualStyleBackColor = true;
+            this.btnBorrarRow.Click += new System.EventHandler(this.btnBorrarRow_Click);
+            // 
             // btnAgregarRow
             // 
             this.btnAgregarRow.FlatAppearance.BorderSize = 0;
@@ -1571,23 +1585,7 @@
             this.btnAgregarRow.TabIndex = 101;
             this.btnAgregarRow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAgregarRow.UseVisualStyleBackColor = true;
-            this.btnAgregarRow.Visible = false;
             this.btnAgregarRow.Click += new System.EventHandler(this.btnAgregarRow_Click);
-            // 
-            // btnBorrarRow
-            // 
-            this.btnBorrarRow.FlatAppearance.BorderSize = 0;
-            this.btnBorrarRow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
-            this.btnBorrarRow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RosyBrown;
-            this.btnBorrarRow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrarRow.Image = global::Emision_de_Guia_Aerea.Properties.Resources.icons8_delete_48;
-            this.btnBorrarRow.Location = new System.Drawing.Point(861, 61);
-            this.btnBorrarRow.Name = "btnBorrarRow";
-            this.btnBorrarRow.Size = new System.Drawing.Size(43, 41);
-            this.btnBorrarRow.TabIndex = 102;
-            this.btnBorrarRow.UseVisualStyleBackColor = true;
-            this.btnBorrarRow.Visible = false;
-            this.btnBorrarRow.Click += new System.EventHandler(this.btnBorrarRow_Click);
             // 
             // frmEmisionGuiaEmbarqueAerea
             // 
