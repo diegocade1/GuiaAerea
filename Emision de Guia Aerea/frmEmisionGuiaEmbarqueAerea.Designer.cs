@@ -122,7 +122,16 @@
             this.txtInformacionManejo = new System.Windows.Forms.TextBox();
             this.lblInformacionManejo = new System.Windows.Forms.Label();
             this.panelDatos = new System.Windows.Forms.Panel();
+            this.btnBorrarRow = new System.Windows.Forms.Button();
+            this.btnAgregarRow = new System.Windows.Forms.Button();
             this.dataGridViewDatos = new System.Windows.Forms.DataGridView();
+            this.colNum_Pieces = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPesoBruto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colKg_Lb = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colCommodityItemNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPesoCobrable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRate_Charge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelNatureQuantityGoods = new System.Windows.Forms.Panel();
             this.txtExportation = new System.Windows.Forms.TextBox();
             this.txtInvoicePO = new System.Windows.Forms.TextBox();
@@ -170,15 +179,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.colNum_Pieces = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPesoBruto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colKg_Lb = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colCommodityItemNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPesoCobrable = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRate_Charge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBorrarRow = new System.Windows.Forms.Button();
-            this.btnAgregarRow = new System.Windows.Forms.Button();
             this.panelExportador.SuspendLayout();
             this.panelConsignatario.SuspendLayout();
             this.panelNotify.SuspendLayout();
@@ -208,7 +208,7 @@
             // lblExportadorNombre
             // 
             this.lblExportadorNombre.AutoSize = true;
-            this.lblExportadorNombre.Location = new System.Drawing.Point(64, 76);
+            this.lblExportadorNombre.Location = new System.Drawing.Point(64, 62);
             this.lblExportadorNombre.Name = "lblExportadorNombre";
             this.lblExportadorNombre.Size = new System.Drawing.Size(44, 13);
             this.lblExportadorNombre.TabIndex = 10;
@@ -217,7 +217,7 @@
             // lblExportadorDireccion1
             // 
             this.lblExportadorDireccion1.AutoSize = true;
-            this.lblExportadorDireccion1.Location = new System.Drawing.Point(47, 108);
+            this.lblExportadorDireccion1.Location = new System.Drawing.Point(47, 93);
             this.lblExportadorDireccion1.Name = "lblExportadorDireccion1";
             this.lblExportadorDireccion1.Size = new System.Drawing.Size(61, 13);
             this.lblExportadorDireccion1.TabIndex = 12;
@@ -226,7 +226,7 @@
             // lblExportadorDireccion2
             // 
             this.lblExportadorDireccion2.AutoSize = true;
-            this.lblExportadorDireccion2.Location = new System.Drawing.Point(47, 142);
+            this.lblExportadorDireccion2.Location = new System.Drawing.Point(47, 124);
             this.lblExportadorDireccion2.Name = "lblExportadorDireccion2";
             this.lblExportadorDireccion2.Size = new System.Drawing.Size(61, 13);
             this.lblExportadorDireccion2.TabIndex = 14;
@@ -246,14 +246,14 @@
             this.panelExportador.Controls.Add(this.lblExportadorDireccion1);
             this.panelExportador.Controls.Add(this.lblExportadorNombre);
             this.panelExportador.Controls.Add(this.lblExportador);
-            this.panelExportador.Location = new System.Drawing.Point(610, 33);
+            this.panelExportador.Location = new System.Drawing.Point(504, 10);
             this.panelExportador.Name = "panelExportador";
-            this.panelExportador.Size = new System.Drawing.Size(289, 215);
+            this.panelExportador.Size = new System.Drawing.Size(271, 189);
             this.panelExportador.TabIndex = 6;
             // 
             // txtExportadorNumeroCuenta
             // 
-            this.txtExportadorNumeroCuenta.Location = new System.Drawing.Point(114, 38);
+            this.txtExportadorNumeroCuenta.Location = new System.Drawing.Point(114, 28);
             this.txtExportadorNumeroCuenta.Name = "txtExportadorNumeroCuenta";
             this.txtExportadorNumeroCuenta.Size = new System.Drawing.Size(143, 20);
             this.txtExportadorNumeroCuenta.TabIndex = 9;
@@ -261,7 +261,7 @@
             // lblExportadorNumeroCuenta
             // 
             this.lblExportadorNumeroCuenta.AutoSize = true;
-            this.lblExportadorNumeroCuenta.Location = new System.Drawing.Point(12, 41);
+            this.lblExportadorNumeroCuenta.Location = new System.Drawing.Point(12, 31);
             this.lblExportadorNumeroCuenta.Name = "lblExportadorNumeroCuenta";
             this.lblExportadorNumeroCuenta.Size = new System.Drawing.Size(96, 13);
             this.lblExportadorNumeroCuenta.TabIndex = 8;
@@ -269,28 +269,28 @@
             // 
             // txtExportadorTelefono
             // 
-            this.txtExportadorTelefono.Location = new System.Drawing.Point(114, 175);
+            this.txtExportadorTelefono.Location = new System.Drawing.Point(114, 152);
             this.txtExportadorTelefono.Name = "txtExportadorTelefono";
             this.txtExportadorTelefono.Size = new System.Drawing.Size(143, 20);
             this.txtExportadorTelefono.TabIndex = 17;
             // 
             // txtExportadorDireccion2
             // 
-            this.txtExportadorDireccion2.Location = new System.Drawing.Point(114, 139);
+            this.txtExportadorDireccion2.Location = new System.Drawing.Point(114, 121);
             this.txtExportadorDireccion2.Name = "txtExportadorDireccion2";
             this.txtExportadorDireccion2.Size = new System.Drawing.Size(143, 20);
             this.txtExportadorDireccion2.TabIndex = 15;
             // 
             // txtExportadorDireccion1
             // 
-            this.txtExportadorDireccion1.Location = new System.Drawing.Point(114, 105);
+            this.txtExportadorDireccion1.Location = new System.Drawing.Point(114, 90);
             this.txtExportadorDireccion1.Name = "txtExportadorDireccion1";
             this.txtExportadorDireccion1.Size = new System.Drawing.Size(143, 20);
             this.txtExportadorDireccion1.TabIndex = 13;
             // 
             // txtExportadorNombre
             // 
-            this.txtExportadorNombre.Location = new System.Drawing.Point(114, 73);
+            this.txtExportadorNombre.Location = new System.Drawing.Point(114, 59);
             this.txtExportadorNombre.Name = "txtExportadorNombre";
             this.txtExportadorNombre.Size = new System.Drawing.Size(143, 20);
             this.txtExportadorNombre.TabIndex = 11;
@@ -298,7 +298,7 @@
             // lblExportadorTelefono
             // 
             this.lblExportadorTelefono.AutoSize = true;
-            this.lblExportadorTelefono.Location = new System.Drawing.Point(59, 178);
+            this.lblExportadorTelefono.Location = new System.Drawing.Point(59, 155);
             this.lblExportadorTelefono.Name = "lblExportadorTelefono";
             this.lblExportadorTelefono.Size = new System.Drawing.Size(49, 13);
             this.lblExportadorTelefono.TabIndex = 161;
@@ -318,14 +318,14 @@
             this.panelConsignatario.Controls.Add(this.lblConsignatarioDireccion1);
             this.panelConsignatario.Controls.Add(this.lblConsignatarioNombre);
             this.panelConsignatario.Controls.Add(this.lblConsignatario);
-            this.panelConsignatario.Location = new System.Drawing.Point(945, 33);
+            this.panelConsignatario.Location = new System.Drawing.Point(781, 10);
             this.panelConsignatario.Name = "panelConsignatario";
-            this.panelConsignatario.Size = new System.Drawing.Size(289, 215);
+            this.panelConsignatario.Size = new System.Drawing.Size(236, 189);
             this.panelConsignatario.TabIndex = 18;
             // 
             // txtConsignatarioEmail
             // 
-            this.txtConsignatarioEmail.Location = new System.Drawing.Point(114, 138);
+            this.txtConsignatarioEmail.Location = new System.Drawing.Point(76, 119);
             this.txtConsignatarioEmail.Name = "txtConsignatarioEmail";
             this.txtConsignatarioEmail.Size = new System.Drawing.Size(143, 20);
             this.txtConsignatarioEmail.TabIndex = 27;
@@ -333,7 +333,7 @@
             // lblConsignatarioEmail
             // 
             this.lblConsignatarioEmail.AutoSize = true;
-            this.lblConsignatarioEmail.Location = new System.Drawing.Point(76, 141);
+            this.lblConsignatarioEmail.Location = new System.Drawing.Point(38, 122);
             this.lblConsignatarioEmail.Name = "lblConsignatarioEmail";
             this.lblConsignatarioEmail.Size = new System.Drawing.Size(32, 13);
             this.lblConsignatarioEmail.TabIndex = 26;
@@ -341,28 +341,28 @@
             // 
             // txtConsignatarioTelefono
             // 
-            this.txtConsignatarioTelefono.Location = new System.Drawing.Point(114, 175);
+            this.txtConsignatarioTelefono.Location = new System.Drawing.Point(76, 149);
             this.txtConsignatarioTelefono.Name = "txtConsignatarioTelefono";
             this.txtConsignatarioTelefono.Size = new System.Drawing.Size(143, 20);
             this.txtConsignatarioTelefono.TabIndex = 29;
             // 
             // txtConsignatarioDireccion2
             // 
-            this.txtConsignatarioDireccion2.Location = new System.Drawing.Point(114, 103);
+            this.txtConsignatarioDireccion2.Location = new System.Drawing.Point(76, 89);
             this.txtConsignatarioDireccion2.Name = "txtConsignatarioDireccion2";
             this.txtConsignatarioDireccion2.Size = new System.Drawing.Size(143, 20);
             this.txtConsignatarioDireccion2.TabIndex = 25;
             // 
             // txtConsignatarioDireccion1
             // 
-            this.txtConsignatarioDireccion1.Location = new System.Drawing.Point(114, 69);
+            this.txtConsignatarioDireccion1.Location = new System.Drawing.Point(76, 59);
             this.txtConsignatarioDireccion1.Name = "txtConsignatarioDireccion1";
             this.txtConsignatarioDireccion1.Size = new System.Drawing.Size(143, 20);
             this.txtConsignatarioDireccion1.TabIndex = 23;
             // 
             // txtConsignatarioNombre
             // 
-            this.txtConsignatarioNombre.Location = new System.Drawing.Point(114, 37);
+            this.txtConsignatarioNombre.Location = new System.Drawing.Point(76, 29);
             this.txtConsignatarioNombre.Name = "txtConsignatarioNombre";
             this.txtConsignatarioNombre.Size = new System.Drawing.Size(143, 20);
             this.txtConsignatarioNombre.TabIndex = 21;
@@ -370,7 +370,7 @@
             // lblConsignatarioTelefono
             // 
             this.lblConsignatarioTelefono.AutoSize = true;
-            this.lblConsignatarioTelefono.Location = new System.Drawing.Point(59, 178);
+            this.lblConsignatarioTelefono.Location = new System.Drawing.Point(25, 152);
             this.lblConsignatarioTelefono.Name = "lblConsignatarioTelefono";
             this.lblConsignatarioTelefono.Size = new System.Drawing.Size(49, 13);
             this.lblConsignatarioTelefono.TabIndex = 28;
@@ -379,7 +379,7 @@
             // lblConsignatarioDireccion2
             // 
             this.lblConsignatarioDireccion2.AutoSize = true;
-            this.lblConsignatarioDireccion2.Location = new System.Drawing.Point(47, 106);
+            this.lblConsignatarioDireccion2.Location = new System.Drawing.Point(9, 92);
             this.lblConsignatarioDireccion2.Name = "lblConsignatarioDireccion2";
             this.lblConsignatarioDireccion2.Size = new System.Drawing.Size(61, 13);
             this.lblConsignatarioDireccion2.TabIndex = 24;
@@ -388,7 +388,7 @@
             // lblConsignatarioDireccion1
             // 
             this.lblConsignatarioDireccion1.AutoSize = true;
-            this.lblConsignatarioDireccion1.Location = new System.Drawing.Point(47, 72);
+            this.lblConsignatarioDireccion1.Location = new System.Drawing.Point(9, 62);
             this.lblConsignatarioDireccion1.Name = "lblConsignatarioDireccion1";
             this.lblConsignatarioDireccion1.Size = new System.Drawing.Size(61, 13);
             this.lblConsignatarioDireccion1.TabIndex = 22;
@@ -397,7 +397,7 @@
             // lblConsignatarioNombre
             // 
             this.lblConsignatarioNombre.AutoSize = true;
-            this.lblConsignatarioNombre.Location = new System.Drawing.Point(64, 40);
+            this.lblConsignatarioNombre.Location = new System.Drawing.Point(26, 32);
             this.lblConsignatarioNombre.Name = "lblConsignatarioNombre";
             this.lblConsignatarioNombre.Size = new System.Drawing.Size(44, 13);
             this.lblConsignatarioNombre.TabIndex = 20;
@@ -406,7 +406,7 @@
             // lblConsignatario
             // 
             this.lblConsignatario.AutoSize = true;
-            this.lblConsignatario.Location = new System.Drawing.Point(120, 0);
+            this.lblConsignatario.Location = new System.Drawing.Point(102, 0);
             this.lblConsignatario.Name = "lblConsignatario";
             this.lblConsignatario.Size = new System.Drawing.Size(71, 13);
             this.lblConsignatario.TabIndex = 19;
@@ -426,14 +426,14 @@
             this.panelNotify.Controls.Add(this.lblNotifyDireccion1);
             this.panelNotify.Controls.Add(this.lblNotifyNombre);
             this.panelNotify.Controls.Add(this.lblNotify);
-            this.panelNotify.Location = new System.Drawing.Point(1273, 33);
+            this.panelNotify.Location = new System.Drawing.Point(1023, 12);
             this.panelNotify.Name = "panelNotify";
-            this.panelNotify.Size = new System.Drawing.Size(289, 215);
+            this.panelNotify.Size = new System.Drawing.Size(240, 187);
             this.panelNotify.TabIndex = 30;
             // 
             // txtNotifyEmail
             // 
-            this.txtNotifyEmail.Location = new System.Drawing.Point(114, 138);
+            this.txtNotifyEmail.Location = new System.Drawing.Point(80, 118);
             this.txtNotifyEmail.Name = "txtNotifyEmail";
             this.txtNotifyEmail.Size = new System.Drawing.Size(143, 20);
             this.txtNotifyEmail.TabIndex = 39;
@@ -441,7 +441,7 @@
             // lblNotifyEmail
             // 
             this.lblNotifyEmail.AutoSize = true;
-            this.lblNotifyEmail.Location = new System.Drawing.Point(76, 141);
+            this.lblNotifyEmail.Location = new System.Drawing.Point(42, 118);
             this.lblNotifyEmail.Name = "lblNotifyEmail";
             this.lblNotifyEmail.Size = new System.Drawing.Size(32, 13);
             this.lblNotifyEmail.TabIndex = 38;
@@ -449,28 +449,28 @@
             // 
             // txtNotifyTelefono
             // 
-            this.txtNotifyTelefono.Location = new System.Drawing.Point(114, 175);
+            this.txtNotifyTelefono.Location = new System.Drawing.Point(80, 148);
             this.txtNotifyTelefono.Name = "txtNotifyTelefono";
             this.txtNotifyTelefono.Size = new System.Drawing.Size(143, 20);
             this.txtNotifyTelefono.TabIndex = 41;
             // 
             // txtNotifyDireccion2
             // 
-            this.txtNotifyDireccion2.Location = new System.Drawing.Point(114, 103);
+            this.txtNotifyDireccion2.Location = new System.Drawing.Point(80, 88);
             this.txtNotifyDireccion2.Name = "txtNotifyDireccion2";
             this.txtNotifyDireccion2.Size = new System.Drawing.Size(143, 20);
             this.txtNotifyDireccion2.TabIndex = 37;
             // 
             // txtNotifyDireccion1
             // 
-            this.txtNotifyDireccion1.Location = new System.Drawing.Point(114, 69);
+            this.txtNotifyDireccion1.Location = new System.Drawing.Point(80, 58);
             this.txtNotifyDireccion1.Name = "txtNotifyDireccion1";
             this.txtNotifyDireccion1.Size = new System.Drawing.Size(143, 20);
             this.txtNotifyDireccion1.TabIndex = 35;
             // 
             // txtNotifyNombre
             // 
-            this.txtNotifyNombre.Location = new System.Drawing.Point(114, 37);
+            this.txtNotifyNombre.Location = new System.Drawing.Point(80, 28);
             this.txtNotifyNombre.Name = "txtNotifyNombre";
             this.txtNotifyNombre.Size = new System.Drawing.Size(143, 20);
             this.txtNotifyNombre.TabIndex = 33;
@@ -478,7 +478,7 @@
             // lblNotifyTelefono
             // 
             this.lblNotifyTelefono.AutoSize = true;
-            this.lblNotifyTelefono.Location = new System.Drawing.Point(59, 178);
+            this.lblNotifyTelefono.Location = new System.Drawing.Point(25, 147);
             this.lblNotifyTelefono.Name = "lblNotifyTelefono";
             this.lblNotifyTelefono.Size = new System.Drawing.Size(49, 13);
             this.lblNotifyTelefono.TabIndex = 40;
@@ -487,7 +487,7 @@
             // lblNotifyDireccion2
             // 
             this.lblNotifyDireccion2.AutoSize = true;
-            this.lblNotifyDireccion2.Location = new System.Drawing.Point(47, 106);
+            this.lblNotifyDireccion2.Location = new System.Drawing.Point(13, 89);
             this.lblNotifyDireccion2.Name = "lblNotifyDireccion2";
             this.lblNotifyDireccion2.Size = new System.Drawing.Size(61, 13);
             this.lblNotifyDireccion2.TabIndex = 36;
@@ -496,7 +496,7 @@
             // lblNotifyDireccion1
             // 
             this.lblNotifyDireccion1.AutoSize = true;
-            this.lblNotifyDireccion1.Location = new System.Drawing.Point(47, 72);
+            this.lblNotifyDireccion1.Location = new System.Drawing.Point(13, 60);
             this.lblNotifyDireccion1.Name = "lblNotifyDireccion1";
             this.lblNotifyDireccion1.Size = new System.Drawing.Size(61, 13);
             this.lblNotifyDireccion1.TabIndex = 34;
@@ -505,7 +505,7 @@
             // lblNotifyNombre
             // 
             this.lblNotifyNombre.AutoSize = true;
-            this.lblNotifyNombre.Location = new System.Drawing.Point(64, 40);
+            this.lblNotifyNombre.Location = new System.Drawing.Point(30, 31);
             this.lblNotifyNombre.Name = "lblNotifyNombre";
             this.lblNotifyNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNotifyNombre.TabIndex = 32;
@@ -514,7 +514,7 @@
             // lblNotify
             // 
             this.lblNotify.AutoSize = true;
-            this.lblNotify.Location = new System.Drawing.Point(120, 0);
+            this.lblNotify.Location = new System.Drawing.Point(93, -1);
             this.lblNotify.Name = "lblNotify";
             this.lblNotify.Size = new System.Drawing.Size(34, 13);
             this.lblNotify.TabIndex = 31;
@@ -534,14 +534,14 @@
             this.panelAgente.Controls.Add(this.lblAgenteNombre);
             this.panelAgente.Controls.Add(this.lblAgenteRut);
             this.panelAgente.Controls.Add(this.lblAgente);
-            this.panelAgente.Location = new System.Drawing.Point(54, 252);
+            this.panelAgente.Location = new System.Drawing.Point(12, 207);
             this.panelAgente.Name = "panelAgente";
-            this.panelAgente.Size = new System.Drawing.Size(270, 216);
+            this.panelAgente.Size = new System.Drawing.Size(235, 182);
             this.panelAgente.TabIndex = 42;
             // 
             // txtAgenteIATA
             // 
-            this.txtAgenteIATA.Location = new System.Drawing.Point(114, 174);
+            this.txtAgenteIATA.Location = new System.Drawing.Point(65, 146);
             this.txtAgenteIATA.Name = "txtAgenteIATA";
             this.txtAgenteIATA.Size = new System.Drawing.Size(143, 20);
             this.txtAgenteIATA.TabIndex = 53;
@@ -549,7 +549,7 @@
             // lblAgenteIATA
             // 
             this.lblAgenteIATA.AutoSize = true;
-            this.lblAgenteIATA.Location = new System.Drawing.Point(77, 177);
+            this.lblAgenteIATA.Location = new System.Drawing.Point(28, 149);
             this.lblAgenteIATA.Name = "lblAgenteIATA";
             this.lblAgenteIATA.Size = new System.Drawing.Size(31, 13);
             this.lblAgenteIATA.TabIndex = 52;
@@ -557,7 +557,7 @@
             // 
             // txtAgenteComuna
             // 
-            this.txtAgenteComuna.Location = new System.Drawing.Point(114, 138);
+            this.txtAgenteComuna.Location = new System.Drawing.Point(65, 115);
             this.txtAgenteComuna.Name = "txtAgenteComuna";
             this.txtAgenteComuna.Size = new System.Drawing.Size(143, 20);
             this.txtAgenteComuna.TabIndex = 51;
@@ -565,7 +565,7 @@
             // lblAgenteComuna
             // 
             this.lblAgenteComuna.AutoSize = true;
-            this.lblAgenteComuna.Location = new System.Drawing.Point(62, 141);
+            this.lblAgenteComuna.Location = new System.Drawing.Point(13, 126);
             this.lblAgenteComuna.Name = "lblAgenteComuna";
             this.lblAgenteComuna.Size = new System.Drawing.Size(46, 13);
             this.lblAgenteComuna.TabIndex = 50;
@@ -573,21 +573,21 @@
             // 
             // txtAgenteDireccion
             // 
-            this.txtAgenteDireccion.Location = new System.Drawing.Point(114, 103);
+            this.txtAgenteDireccion.Location = new System.Drawing.Point(65, 84);
             this.txtAgenteDireccion.Name = "txtAgenteDireccion";
             this.txtAgenteDireccion.Size = new System.Drawing.Size(143, 20);
             this.txtAgenteDireccion.TabIndex = 49;
             // 
             // txtAgenteNombre
             // 
-            this.txtAgenteNombre.Location = new System.Drawing.Point(114, 69);
+            this.txtAgenteNombre.Location = new System.Drawing.Point(65, 53);
             this.txtAgenteNombre.Name = "txtAgenteNombre";
             this.txtAgenteNombre.Size = new System.Drawing.Size(143, 20);
             this.txtAgenteNombre.TabIndex = 47;
             // 
             // txtAgenteRut
             // 
-            this.txtAgenteRut.Location = new System.Drawing.Point(114, 37);
+            this.txtAgenteRut.Location = new System.Drawing.Point(65, 22);
             this.txtAgenteRut.Name = "txtAgenteRut";
             this.txtAgenteRut.Size = new System.Drawing.Size(143, 20);
             this.txtAgenteRut.TabIndex = 45;
@@ -595,7 +595,7 @@
             // lblAgenteDireccion
             // 
             this.lblAgenteDireccion.AutoSize = true;
-            this.lblAgenteDireccion.Location = new System.Drawing.Point(56, 106);
+            this.lblAgenteDireccion.Location = new System.Drawing.Point(7, 91);
             this.lblAgenteDireccion.Name = "lblAgenteDireccion";
             this.lblAgenteDireccion.Size = new System.Drawing.Size(52, 13);
             this.lblAgenteDireccion.TabIndex = 48;
@@ -604,7 +604,7 @@
             // lblAgenteNombre
             // 
             this.lblAgenteNombre.AutoSize = true;
-            this.lblAgenteNombre.Location = new System.Drawing.Point(64, 72);
+            this.lblAgenteNombre.Location = new System.Drawing.Point(15, 57);
             this.lblAgenteNombre.Name = "lblAgenteNombre";
             this.lblAgenteNombre.Size = new System.Drawing.Size(44, 13);
             this.lblAgenteNombre.TabIndex = 46;
@@ -613,7 +613,7 @@
             // lblAgenteRut
             // 
             this.lblAgenteRut.AutoSize = true;
-            this.lblAgenteRut.Location = new System.Drawing.Point(84, 40);
+            this.lblAgenteRut.Location = new System.Drawing.Point(35, 25);
             this.lblAgenteRut.Name = "lblAgenteRut";
             this.lblAgenteRut.Size = new System.Drawing.Size(24, 13);
             this.lblAgenteRut.TabIndex = 44;
@@ -622,7 +622,7 @@
             // lblAgente
             // 
             this.lblAgente.AutoSize = true;
-            this.lblAgente.Location = new System.Drawing.Point(120, 0);
+            this.lblAgente.Location = new System.Drawing.Point(77, 0);
             this.lblAgente.Name = "lblAgente";
             this.lblAgente.Size = new System.Drawing.Size(41, 13);
             this.lblAgente.TabIndex = 43;
@@ -643,14 +643,14 @@
             this.panelAeropuerto.Controls.Add(this.txtAeropuertoSalida);
             this.panelAeropuerto.Controls.Add(this.lblAeropuertoSalidaNombre);
             this.panelAeropuerto.Controls.Add(this.lblAeropuertoSalida);
-            this.panelAeropuerto.Location = new System.Drawing.Point(330, 251);
+            this.panelAeropuerto.Location = new System.Drawing.Point(253, 207);
             this.panelAeropuerto.Name = "panelAeropuerto";
-            this.panelAeropuerto.Size = new System.Drawing.Size(581, 218);
+            this.panelAeropuerto.Size = new System.Drawing.Size(477, 182);
             this.panelAeropuerto.TabIndex = 54;
             // 
             // txtInformacionOpcional
             // 
-            this.txtInformacionOpcional.Location = new System.Drawing.Point(283, 77);
+            this.txtInformacionOpcional.Location = new System.Drawing.Point(218, 54);
             this.txtInformacionOpcional.Multiline = true;
             this.txtInformacionOpcional.Name = "txtInformacionOpcional";
             this.txtInformacionOpcional.Size = new System.Drawing.Size(245, 121);
@@ -658,7 +658,7 @@
             // 
             // txtInformacionOpcionalNumeroReferencia
             // 
-            this.txtInformacionOpcionalNumeroReferencia.Location = new System.Drawing.Point(385, 45);
+            this.txtInformacionOpcionalNumeroReferencia.Location = new System.Drawing.Point(320, 25);
             this.txtInformacionOpcionalNumeroReferencia.Name = "txtInformacionOpcionalNumeroReferencia";
             this.txtInformacionOpcionalNumeroReferencia.Size = new System.Drawing.Size(143, 20);
             this.txtInformacionOpcionalNumeroReferencia.TabIndex = 65;
@@ -666,7 +666,7 @@
             // lblInformacionOpcionalNumeroReferencia
             // 
             this.lblInformacionOpcionalNumeroReferencia.AutoSize = true;
-            this.lblInformacionOpcionalNumeroReferencia.Location = new System.Drawing.Point(280, 48);
+            this.lblInformacionOpcionalNumeroReferencia.Location = new System.Drawing.Point(215, 25);
             this.lblInformacionOpcionalNumeroReferencia.Name = "lblInformacionOpcionalNumeroReferencia";
             this.lblInformacionOpcionalNumeroReferencia.Size = new System.Drawing.Size(99, 13);
             this.lblInformacionOpcionalNumeroReferencia.TabIndex = 64;
@@ -675,7 +675,7 @@
             // lblInformacionOpcional
             // 
             this.lblInformacionOpcional.AutoSize = true;
-            this.lblInformacionOpcional.Location = new System.Drawing.Point(375, 18);
+            this.lblInformacionOpcional.Location = new System.Drawing.Point(310, 4);
             this.lblInformacionOpcional.Name = "lblInformacionOpcional";
             this.lblInformacionOpcional.Size = new System.Drawing.Size(107, 13);
             this.lblInformacionOpcional.TabIndex = 63;
@@ -683,7 +683,7 @@
             // 
             // txtRutaSolicitada
             // 
-            this.txtRutaSolicitada.Location = new System.Drawing.Point(75, 178);
+            this.txtRutaSolicitada.Location = new System.Drawing.Point(58, 152);
             this.txtRutaSolicitada.Name = "txtRutaSolicitada";
             this.txtRutaSolicitada.Size = new System.Drawing.Size(143, 20);
             this.txtRutaSolicitada.TabIndex = 62;
@@ -691,7 +691,7 @@
             // lblRutaSolicitada
             // 
             this.lblRutaSolicitada.AutoSize = true;
-            this.lblRutaSolicitada.Location = new System.Drawing.Point(81, 151);
+            this.lblRutaSolicitada.Location = new System.Drawing.Point(64, 125);
             this.lblRutaSolicitada.Name = "lblRutaSolicitada";
             this.lblRutaSolicitada.Size = new System.Drawing.Size(79, 13);
             this.lblRutaSolicitada.TabIndex = 61;
@@ -699,7 +699,7 @@
             // 
             // txtAeropuertoDestino
             // 
-            this.txtAeropuertoDestino.Location = new System.Drawing.Point(75, 111);
+            this.txtAeropuertoDestino.Location = new System.Drawing.Point(58, 85);
             this.txtAeropuertoDestino.Name = "txtAeropuertoDestino";
             this.txtAeropuertoDestino.Size = new System.Drawing.Size(143, 20);
             this.txtAeropuertoDestino.TabIndex = 60;
@@ -707,7 +707,7 @@
             // lblAeropuertoNombreDestino
             // 
             this.lblAeropuertoNombreDestino.AutoSize = true;
-            this.lblAeropuertoNombreDestino.Location = new System.Drawing.Point(25, 114);
+            this.lblAeropuertoNombreDestino.Location = new System.Drawing.Point(8, 88);
             this.lblAeropuertoNombreDestino.Name = "lblAeropuertoNombreDestino";
             this.lblAeropuertoNombreDestino.Size = new System.Drawing.Size(44, 13);
             this.lblAeropuertoNombreDestino.TabIndex = 59;
@@ -716,7 +716,7 @@
             // lblAeropuertoDestino
             // 
             this.lblAeropuertoDestino.AutoSize = true;
-            this.lblAeropuertoDestino.Location = new System.Drawing.Point(81, 84);
+            this.lblAeropuertoDestino.Location = new System.Drawing.Point(64, 58);
             this.lblAeropuertoDestino.Name = "lblAeropuertoDestino";
             this.lblAeropuertoDestino.Size = new System.Drawing.Size(104, 13);
             this.lblAeropuertoDestino.TabIndex = 58;
@@ -724,7 +724,7 @@
             // 
             // txtAeropuertoSalida
             // 
-            this.txtAeropuertoSalida.Location = new System.Drawing.Point(75, 45);
+            this.txtAeropuertoSalida.Location = new System.Drawing.Point(58, 25);
             this.txtAeropuertoSalida.Name = "txtAeropuertoSalida";
             this.txtAeropuertoSalida.Size = new System.Drawing.Size(143, 20);
             this.txtAeropuertoSalida.TabIndex = 57;
@@ -732,7 +732,7 @@
             // lblAeropuertoSalidaNombre
             // 
             this.lblAeropuertoSalidaNombre.AutoSize = true;
-            this.lblAeropuertoSalidaNombre.Location = new System.Drawing.Point(25, 48);
+            this.lblAeropuertoSalidaNombre.Location = new System.Drawing.Point(8, 25);
             this.lblAeropuertoSalidaNombre.Name = "lblAeropuertoSalidaNombre";
             this.lblAeropuertoSalidaNombre.Size = new System.Drawing.Size(44, 13);
             this.lblAeropuertoSalidaNombre.TabIndex = 56;
@@ -741,7 +741,7 @@
             // lblAeropuertoSalida
             // 
             this.lblAeropuertoSalida.AutoSize = true;
-            this.lblAeropuertoSalida.Location = new System.Drawing.Point(81, 18);
+            this.lblAeropuertoSalida.Location = new System.Drawing.Point(64, 4);
             this.lblAeropuertoSalida.Name = "lblAeropuertoSalida";
             this.lblAeropuertoSalida.Size = new System.Drawing.Size(97, 13);
             this.lblAeropuertoSalida.TabIndex = 55;
@@ -764,16 +764,16 @@
             this.panelRutaDestino.Controls.Add(this.txtPrimerCarrier);
             this.panelRutaDestino.Controls.Add(this.lblPrimerCarrierPrefijo);
             this.panelRutaDestino.Controls.Add(this.lblPrimerCarrier);
-            this.panelRutaDestino.Location = new System.Drawing.Point(917, 251);
+            this.panelRutaDestino.Location = new System.Drawing.Point(736, 207);
             this.panelRutaDestino.Name = "panelRutaDestino";
-            this.panelRutaDestino.Size = new System.Drawing.Size(647, 218);
+            this.panelRutaDestino.Size = new System.Drawing.Size(527, 182);
             this.panelRutaDestino.TabIndex = 67;
             // 
             // dtpFechaVuelo
             // 
             this.dtpFechaVuelo.CustomFormat = "\"u\"";
             this.dtpFechaVuelo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaVuelo.Location = new System.Drawing.Point(390, 92);
+            this.dtpFechaVuelo.Location = new System.Drawing.Point(303, 58);
             this.dtpFechaVuelo.Name = "dtpFechaVuelo";
             this.dtpFechaVuelo.Size = new System.Drawing.Size(143, 20);
             this.dtpFechaVuelo.TabIndex = 81;
@@ -781,7 +781,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(295, 98);
+            this.label2.Location = new System.Drawing.Point(216, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 13);
             this.label2.TabIndex = 80;
@@ -790,7 +790,7 @@
             // lblTercerCarrierPrefijo
             // 
             this.lblTercerCarrierPrefijo.AutoSize = true;
-            this.lblTercerCarrierPrefijo.Location = new System.Drawing.Point(50, 185);
+            this.lblTercerCarrierPrefijo.Location = new System.Drawing.Point(20, 146);
             this.lblTercerCarrierPrefijo.Name = "lblTercerCarrierPrefijo";
             this.lblTercerCarrierPrefijo.Size = new System.Drawing.Size(36, 13);
             this.lblTercerCarrierPrefijo.TabIndex = 76;
@@ -807,7 +807,7 @@
             // 
             // txtNumeroVuelo
             // 
-            this.txtNumeroVuelo.Location = new System.Drawing.Point(390, 53);
+            this.txtNumeroVuelo.Location = new System.Drawing.Point(303, 26);
             this.txtNumeroVuelo.Name = "txtNumeroVuelo";
             this.txtNumeroVuelo.Size = new System.Drawing.Size(143, 20);
             this.txtNumeroVuelo.TabIndex = 79;
@@ -815,7 +815,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(295, 56);
+            this.label1.Location = new System.Drawing.Point(216, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 13);
             this.label1.TabIndex = 78;
@@ -823,7 +823,7 @@
             // 
             // txtTercerCarrier
             // 
-            this.txtTercerCarrier.Location = new System.Drawing.Point(89, 182);
+            this.txtTercerCarrier.Location = new System.Drawing.Point(57, 142);
             this.txtTercerCarrier.Name = "txtTercerCarrier";
             this.txtTercerCarrier.Size = new System.Drawing.Size(143, 20);
             this.txtTercerCarrier.TabIndex = 77;
@@ -831,7 +831,7 @@
             // lblTercerCarrier
             // 
             this.lblTercerCarrier.AutoSize = true;
-            this.lblTercerCarrier.Location = new System.Drawing.Point(95, 155);
+            this.lblTercerCarrier.Location = new System.Drawing.Point(63, 122);
             this.lblTercerCarrier.Name = "lblTercerCarrier";
             this.lblTercerCarrier.Size = new System.Drawing.Size(119, 13);
             this.lblTercerCarrier.TabIndex = 75;
@@ -839,7 +839,7 @@
             // 
             // txtSegundoCarrier
             // 
-            this.txtSegundoCarrier.Location = new System.Drawing.Point(89, 115);
+            this.txtSegundoCarrier.Location = new System.Drawing.Point(57, 85);
             this.txtSegundoCarrier.Name = "txtSegundoCarrier";
             this.txtSegundoCarrier.Size = new System.Drawing.Size(143, 20);
             this.txtSegundoCarrier.TabIndex = 74;
@@ -847,7 +847,7 @@
             // lblSegundoCarrierPrefijo
             // 
             this.lblSegundoCarrierPrefijo.AutoSize = true;
-            this.lblSegundoCarrierPrefijo.Location = new System.Drawing.Point(47, 118);
+            this.lblSegundoCarrierPrefijo.Location = new System.Drawing.Point(15, 88);
             this.lblSegundoCarrierPrefijo.Name = "lblSegundoCarrierPrefijo";
             this.lblSegundoCarrierPrefijo.Size = new System.Drawing.Size(36, 13);
             this.lblSegundoCarrierPrefijo.TabIndex = 73;
@@ -856,7 +856,7 @@
             // lblSegundoCarrier
             // 
             this.lblSegundoCarrier.AutoSize = true;
-            this.lblSegundoCarrier.Location = new System.Drawing.Point(95, 88);
+            this.lblSegundoCarrier.Location = new System.Drawing.Point(63, 65);
             this.lblSegundoCarrier.Name = "lblSegundoCarrier";
             this.lblSegundoCarrier.Size = new System.Drawing.Size(83, 13);
             this.lblSegundoCarrier.TabIndex = 72;
@@ -864,7 +864,7 @@
             // 
             // txtPrimerCarrier
             // 
-            this.txtPrimerCarrier.Location = new System.Drawing.Point(89, 49);
+            this.txtPrimerCarrier.Location = new System.Drawing.Point(57, 29);
             this.txtPrimerCarrier.Name = "txtPrimerCarrier";
             this.txtPrimerCarrier.Size = new System.Drawing.Size(143, 20);
             this.txtPrimerCarrier.TabIndex = 71;
@@ -872,7 +872,7 @@
             // lblPrimerCarrierPrefijo
             // 
             this.lblPrimerCarrierPrefijo.AutoSize = true;
-            this.lblPrimerCarrierPrefijo.Location = new System.Drawing.Point(47, 52);
+            this.lblPrimerCarrierPrefijo.Location = new System.Drawing.Point(15, 32);
             this.lblPrimerCarrierPrefijo.Name = "lblPrimerCarrierPrefijo";
             this.lblPrimerCarrierPrefijo.Size = new System.Drawing.Size(36, 13);
             this.lblPrimerCarrierPrefijo.TabIndex = 70;
@@ -881,7 +881,7 @@
             // lblPrimerCarrier
             // 
             this.lblPrimerCarrier.AutoSize = true;
-            this.lblPrimerCarrier.Location = new System.Drawing.Point(114, 22);
+            this.lblPrimerCarrier.Location = new System.Drawing.Point(83, 13);
             this.lblPrimerCarrier.Name = "lblPrimerCarrier";
             this.lblPrimerCarrier.Size = new System.Drawing.Size(69, 13);
             this.lblPrimerCarrier.TabIndex = 69;
@@ -903,14 +903,14 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.lblMonedaPrefijo);
             this.panel1.Controls.Add(this.lblMoneda);
-            this.panel1.Location = new System.Drawing.Point(54, 475);
+            this.panel1.Location = new System.Drawing.Point(12, 395);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(289, 288);
+            this.panel1.Size = new System.Drawing.Size(235, 247);
             this.panel1.TabIndex = 82;
             // 
             // txtValorDeclaradoCustom
             // 
-            this.txtValorDeclaradoCustom.Location = new System.Drawing.Point(82, 254);
+            this.txtValorDeclaradoCustom.Location = new System.Drawing.Point(45, 217);
             this.txtValorDeclaradoCustom.Name = "txtValorDeclaradoCustom";
             this.txtValorDeclaradoCustom.Size = new System.Drawing.Size(143, 20);
             this.txtValorDeclaradoCustom.TabIndex = 95;
@@ -918,7 +918,7 @@
             // lblValorDeclaradoCustom
             // 
             this.lblValorDeclaradoCustom.AutoSize = true;
-            this.lblValorDeclaradoCustom.Location = new System.Drawing.Point(79, 238);
+            this.lblValorDeclaradoCustom.Location = new System.Drawing.Point(42, 201);
             this.lblValorDeclaradoCustom.Name = "lblValorDeclaradoCustom";
             this.lblValorDeclaradoCustom.Size = new System.Drawing.Size(126, 13);
             this.lblValorDeclaradoCustom.TabIndex = 94;
@@ -931,7 +931,7 @@
             this.cbOtros.Items.AddRange(new object[] {
             "PPD",
             "COLL"});
-            this.cbOtros.Location = new System.Drawing.Point(114, 138);
+            this.cbOtros.Location = new System.Drawing.Point(80, 117);
             this.cbOtros.Name = "cbOtros";
             this.cbOtros.Size = new System.Drawing.Size(143, 21);
             this.cbOtros.TabIndex = 91;
@@ -943,7 +943,7 @@
             this.cbWRT_VAL.Items.AddRange(new object[] {
             "PPD",
             "COLL"});
-            this.cbWRT_VAL.Location = new System.Drawing.Point(114, 103);
+            this.cbWRT_VAL.Location = new System.Drawing.Point(80, 82);
             this.cbWRT_VAL.Name = "cbWRT_VAL";
             this.cbWRT_VAL.Size = new System.Drawing.Size(143, 21);
             this.cbWRT_VAL.TabIndex = 89;
@@ -955,14 +955,14 @@
             this.cbCHGS.Items.AddRange(new object[] {
             "CC",
             "PP"});
-            this.cbCHGS.Location = new System.Drawing.Point(114, 68);
+            this.cbCHGS.Location = new System.Drawing.Point(80, 47);
             this.cbCHGS.Name = "cbCHGS";
             this.cbCHGS.Size = new System.Drawing.Size(143, 21);
             this.cbCHGS.TabIndex = 87;
             // 
             // txtValorDeclaradoTransporte
             // 
-            this.txtValorDeclaradoTransporte.Location = new System.Drawing.Point(82, 202);
+            this.txtValorDeclaradoTransporte.Location = new System.Drawing.Point(45, 165);
             this.txtValorDeclaradoTransporte.Name = "txtValorDeclaradoTransporte";
             this.txtValorDeclaradoTransporte.Size = new System.Drawing.Size(143, 20);
             this.txtValorDeclaradoTransporte.TabIndex = 93;
@@ -970,7 +970,7 @@
             // lblValorDeclaradoTransporte
             // 
             this.lblValorDeclaradoTransporte.AutoSize = true;
-            this.lblValorDeclaradoTransporte.Location = new System.Drawing.Point(79, 186);
+            this.lblValorDeclaradoTransporte.Location = new System.Drawing.Point(42, 149);
             this.lblValorDeclaradoTransporte.Name = "lblValorDeclaradoTransporte";
             this.lblValorDeclaradoTransporte.Size = new System.Drawing.Size(137, 13);
             this.lblValorDeclaradoTransporte.TabIndex = 92;
@@ -979,7 +979,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(76, 141);
+            this.label4.Location = new System.Drawing.Point(42, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 90;
@@ -987,7 +987,7 @@
             // 
             // txtMonedaPrefijo
             // 
-            this.txtMonedaPrefijo.Location = new System.Drawing.Point(114, 37);
+            this.txtMonedaPrefijo.Location = new System.Drawing.Point(80, 16);
             this.txtMonedaPrefijo.Name = "txtMonedaPrefijo";
             this.txtMonedaPrefijo.Size = new System.Drawing.Size(143, 20);
             this.txtMonedaPrefijo.TabIndex = 85;
@@ -995,7 +995,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(50, 106);
+            this.label5.Location = new System.Drawing.Point(16, 85);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 13);
             this.label5.TabIndex = 88;
@@ -1004,7 +1004,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(35, 71);
+            this.label6.Location = new System.Drawing.Point(1, 50);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 13);
             this.label6.TabIndex = 86;
@@ -1013,7 +1013,7 @@
             // lblMonedaPrefijo
             // 
             this.lblMonedaPrefijo.AutoSize = true;
-            this.lblMonedaPrefijo.Location = new System.Drawing.Point(72, 42);
+            this.lblMonedaPrefijo.Location = new System.Drawing.Point(38, 21);
             this.lblMonedaPrefijo.Name = "lblMonedaPrefijo";
             this.lblMonedaPrefijo.Size = new System.Drawing.Size(36, 13);
             this.lblMonedaPrefijo.TabIndex = 84;
@@ -1022,7 +1022,7 @@
             // lblMoneda
             // 
             this.lblMoneda.AutoSize = true;
-            this.lblMoneda.Location = new System.Drawing.Point(120, 0);
+            this.lblMoneda.Location = new System.Drawing.Point(86, -2);
             this.lblMoneda.Name = "lblMoneda";
             this.lblMoneda.Size = new System.Drawing.Size(46, 13);
             this.lblMoneda.TabIndex = 83;
@@ -1033,23 +1033,23 @@
             this.panelHandlingInformation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelHandlingInformation.Controls.Add(this.txtInformacionManejo);
             this.panelHandlingInformation.Controls.Add(this.lblInformacionManejo);
-            this.panelHandlingInformation.Location = new System.Drawing.Point(349, 476);
+            this.panelHandlingInformation.Location = new System.Drawing.Point(253, 395);
             this.panelHandlingInformation.Name = "panelHandlingInformation";
-            this.panelHandlingInformation.Size = new System.Drawing.Size(289, 288);
+            this.panelHandlingInformation.Size = new System.Drawing.Size(265, 247);
             this.panelHandlingInformation.TabIndex = 86;
             // 
             // txtInformacionManejo
             // 
-            this.txtInformacionManejo.Location = new System.Drawing.Point(25, 38);
+            this.txtInformacionManejo.Location = new System.Drawing.Point(11, 16);
             this.txtInformacionManejo.Multiline = true;
             this.txtInformacionManejo.Name = "txtInformacionManejo";
-            this.txtInformacionManejo.Size = new System.Drawing.Size(245, 235);
+            this.txtInformacionManejo.Size = new System.Drawing.Size(245, 221);
             this.txtInformacionManejo.TabIndex = 98;
             // 
             // lblInformacionManejo
             // 
             this.lblInformacionManejo.AutoSize = true;
-            this.lblInformacionManejo.Location = new System.Drawing.Point(87, 0);
+            this.lblInformacionManejo.Location = new System.Drawing.Point(55, 0);
             this.lblInformacionManejo.Name = "lblInformacionManejo";
             this.lblInformacionManejo.Size = new System.Drawing.Size(115, 13);
             this.lblInformacionManejo.TabIndex = 97;
@@ -1058,13 +1058,42 @@
             // panelDatos
             // 
             this.panelDatos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelDatos.Controls.Add(this.btnBorrarRow);
             this.panelDatos.Controls.Add(this.btnAgregarRow);
             this.panelDatos.Controls.Add(this.dataGridViewDatos);
-            this.panelDatos.Location = new System.Drawing.Point(653, 475);
+            this.panelDatos.Controls.Add(this.btnBorrarRow);
+            this.panelDatos.Location = new System.Drawing.Point(523, 395);
             this.panelDatos.Name = "panelDatos";
-            this.panelDatos.Size = new System.Drawing.Size(913, 289);
+            this.panelDatos.Size = new System.Drawing.Size(739, 248);
             this.panelDatos.TabIndex = 99;
+            // 
+            // btnBorrarRow
+            // 
+            this.btnBorrarRow.FlatAppearance.BorderSize = 0;
+            this.btnBorrarRow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
+            this.btnBorrarRow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RosyBrown;
+            this.btnBorrarRow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrarRow.Image = global::Emision_de_Guia_Aerea.Properties.Resources.icons8_delete_48;
+            this.btnBorrarRow.Location = new System.Drawing.Point(690, 50);
+            this.btnBorrarRow.Name = "btnBorrarRow";
+            this.btnBorrarRow.Size = new System.Drawing.Size(43, 41);
+            this.btnBorrarRow.TabIndex = 102;
+            this.btnBorrarRow.UseVisualStyleBackColor = true;
+            this.btnBorrarRow.Click += new System.EventHandler(this.btnBorrarRow_Click);
+            // 
+            // btnAgregarRow
+            // 
+            this.btnAgregarRow.FlatAppearance.BorderSize = 0;
+            this.btnAgregarRow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
+            this.btnAgregarRow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btnAgregarRow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarRow.Image = global::Emision_de_Guia_Aerea.Properties.Resources.icons8_plus_48;
+            this.btnAgregarRow.Location = new System.Drawing.Point(690, 3);
+            this.btnAgregarRow.Name = "btnAgregarRow";
+            this.btnAgregarRow.Size = new System.Drawing.Size(43, 41);
+            this.btnAgregarRow.TabIndex = 101;
+            this.btnAgregarRow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAgregarRow.UseVisualStyleBackColor = true;
+            this.btnAgregarRow.Click += new System.EventHandler(this.btnAgregarRow_Click);
             // 
             // dataGridViewDatos
             // 
@@ -1082,10 +1111,52 @@
             this.colTotal});
             this.dataGridViewDatos.Location = new System.Drawing.Point(3, 3);
             this.dataGridViewDatos.Name = "dataGridViewDatos";
-            this.dataGridViewDatos.Size = new System.Drawing.Size(856, 281);
+            this.dataGridViewDatos.Size = new System.Drawing.Size(681, 235);
             this.dataGridViewDatos.TabIndex = 100;
             this.dataGridViewDatos.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDatos_CellValueChanged);
             this.dataGridViewDatos.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridViewDatos_EditingControlShowing);
+            // 
+            // colNum_Pieces
+            // 
+            this.colNum_Pieces.HeaderText = "No. de Piezas RCP";
+            this.colNum_Pieces.Name = "colNum_Pieces";
+            // 
+            // colPesoBruto
+            // 
+            this.colPesoBruto.HeaderText = "Peso Bruto";
+            this.colPesoBruto.Name = "colPesoBruto";
+            // 
+            // colKg_Lb
+            // 
+            this.colKg_Lb.HeaderText = "Kg lb";
+            this.colKg_Lb.Items.AddRange(new object[] {
+            "Kg",
+            "Lb"});
+            this.colKg_Lb.Name = "colKg_Lb";
+            this.colKg_Lb.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colKg_Lb.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // colCommodityItemNum
+            // 
+            this.colCommodityItemNum.HeaderText = "Commodity Item No.";
+            this.colCommodityItemNum.Name = "colCommodityItemNum";
+            // 
+            // colPesoCobrable
+            // 
+            this.colPesoCobrable.HeaderText = "Peso Cobrable";
+            this.colPesoCobrable.Name = "colPesoCobrable";
+            this.colPesoCobrable.ReadOnly = true;
+            // 
+            // colRate_Charge
+            // 
+            this.colRate_Charge.HeaderText = "Ratio / Cobro";
+            this.colRate_Charge.Name = "colRate_Charge";
+            // 
+            // colTotal
+            // 
+            this.colTotal.HeaderText = "Total";
+            this.colTotal.Name = "colTotal";
+            this.colTotal.ReadOnly = true;
             // 
             // panelNatureQuantityGoods
             // 
@@ -1441,9 +1512,9 @@
             this.panel5.Controls.Add(this.label20);
             this.panel5.Controls.Add(this.txtGuide);
             this.panel5.Controls.Add(this.label25);
-            this.panel5.Location = new System.Drawing.Point(317, 33);
+            this.panel5.Location = new System.Drawing.Point(253, 10);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(244, 215);
+            this.panel5.Size = new System.Drawing.Size(244, 189);
             this.panel5.TabIndex = 0;
             // 
             // label22
@@ -1457,7 +1528,7 @@
             // 
             // txtAirlineCode
             // 
-            this.txtAirlineCode.Location = new System.Drawing.Point(100, 38);
+            this.txtAirlineCode.Location = new System.Drawing.Point(94, 25);
             this.txtAirlineCode.Name = "txtAirlineCode";
             this.txtAirlineCode.Size = new System.Drawing.Size(131, 20);
             this.txtAirlineCode.TabIndex = 3;
@@ -1465,7 +1536,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(12, 41);
+            this.label20.Location = new System.Drawing.Point(6, 28);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(87, 13);
             this.label20.TabIndex = 2;
@@ -1473,7 +1544,7 @@
             // 
             // txtGuide
             // 
-            this.txtGuide.Location = new System.Drawing.Point(73, 73);
+            this.txtGuide.Location = new System.Drawing.Point(67, 60);
             this.txtGuide.Name = "txtGuide";
             this.txtGuide.Size = new System.Drawing.Size(158, 20);
             this.txtGuide.TabIndex = 5;
@@ -1481,7 +1552,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(12, 76);
+            this.label25.Location = new System.Drawing.Point(6, 63);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(60, 13);
             this.label25.TabIndex = 4;
@@ -1492,9 +1563,9 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.btnLimpiar);
             this.panel6.Controls.Add(this.btnGuardar);
-            this.panel6.Location = new System.Drawing.Point(54, 31);
+            this.panel6.Location = new System.Drawing.Point(12, 10);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(235, 215);
+            this.panel6.Size = new System.Drawing.Size(235, 189);
             this.panel6.TabIndex = 140;
             // 
             // btnLimpiar
@@ -1516,88 +1587,17 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // colNum_Pieces
-            // 
-            this.colNum_Pieces.HeaderText = "No. de Piezas RCP";
-            this.colNum_Pieces.Name = "colNum_Pieces";
-            // 
-            // colPesoBruto
-            // 
-            this.colPesoBruto.HeaderText = "Peso Bruto";
-            this.colPesoBruto.Name = "colPesoBruto";
-            // 
-            // colKg_Lb
-            // 
-            this.colKg_Lb.HeaderText = "Kg lb";
-            this.colKg_Lb.Items.AddRange(new object[] {
-            "Kg",
-            "Lb"});
-            this.colKg_Lb.Name = "colKg_Lb";
-            this.colKg_Lb.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colKg_Lb.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // colCommodityItemNum
-            // 
-            this.colCommodityItemNum.HeaderText = "Commodity Item No.";
-            this.colCommodityItemNum.Name = "colCommodityItemNum";
-            // 
-            // colPesoCobrable
-            // 
-            this.colPesoCobrable.HeaderText = "Peso Cobrable";
-            this.colPesoCobrable.Name = "colPesoCobrable";
-            this.colPesoCobrable.ReadOnly = true;
-            // 
-            // colRate_Charge
-            // 
-            this.colRate_Charge.HeaderText = "Ratio / Cobro";
-            this.colRate_Charge.Name = "colRate_Charge";
-            // 
-            // colTotal
-            // 
-            this.colTotal.HeaderText = "Total";
-            this.colTotal.Name = "colTotal";
-            this.colTotal.ReadOnly = true;
-            // 
-            // btnBorrarRow
-            // 
-            this.btnBorrarRow.FlatAppearance.BorderSize = 0;
-            this.btnBorrarRow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
-            this.btnBorrarRow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RosyBrown;
-            this.btnBorrarRow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrarRow.Image = global::Emision_de_Guia_Aerea.Properties.Resources.icons8_delete_48;
-            this.btnBorrarRow.Location = new System.Drawing.Point(861, 61);
-            this.btnBorrarRow.Name = "btnBorrarRow";
-            this.btnBorrarRow.Size = new System.Drawing.Size(43, 41);
-            this.btnBorrarRow.TabIndex = 102;
-            this.btnBorrarRow.UseVisualStyleBackColor = true;
-            this.btnBorrarRow.Click += new System.EventHandler(this.btnBorrarRow_Click);
-            // 
-            // btnAgregarRow
-            // 
-            this.btnAgregarRow.FlatAppearance.BorderSize = 0;
-            this.btnAgregarRow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
-            this.btnAgregarRow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.btnAgregarRow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarRow.Image = global::Emision_de_Guia_Aerea.Properties.Resources.icons8_plus_48;
-            this.btnAgregarRow.Location = new System.Drawing.Point(861, 14);
-            this.btnAgregarRow.Name = "btnAgregarRow";
-            this.btnAgregarRow.Size = new System.Drawing.Size(43, 41);
-            this.btnAgregarRow.TabIndex = 101;
-            this.btnAgregarRow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnAgregarRow.UseVisualStyleBackColor = true;
-            this.btnAgregarRow.Click += new System.EventHandler(this.btnAgregarRow_Click);
-            // 
             // frmEmisionGuiaEmbarqueAerea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1595, 902);
+            this.ClientSize = new System.Drawing.Size(1274, 661);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panelDatos);
             this.Controls.Add(this.panelFirmas);
             this.Controls.Add(this.panelValores);
             this.Controls.Add(this.panelNatureQuantityGoods);
-            this.Controls.Add(this.panelDatos);
             this.Controls.Add(this.panelHandlingInformation);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelRutaDestino);
