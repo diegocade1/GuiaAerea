@@ -83,9 +83,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="N_Accounting_Info.cs" />
+    <Compile Include="N_Airline.cs" />
+    <Compile Include="N_Airport.cs" />
+    <Compile Include="N_Carrier_Agent.cs" />
+    <Compile Include="N_Consignee.cs" />
+    <Compile Include="N_Currency.cs" />
+    <Compile Include="N_Guide.cs" />
+    <Compile Include="N_Guide_Type.cs" />
     <Compile Include="N_MySQL.cs" />
     <Compile Include="N_PDF.cs" />
-    <Compile Include="N_Shippment_Guide.cs" />
+    <Compile Include="N_Shipper.cs" />
+    <Compile Include="N_Shipment_Guide.cs" />
+    <Compile Include="N_ULD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

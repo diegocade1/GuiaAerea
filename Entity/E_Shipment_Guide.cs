@@ -10,17 +10,18 @@ namespace Entity
     {
         public string Shipper { get; set; }
         public string Aerial_guide { get; set; }
-        public string Prefix { get; set; }
         public string Consignee { get; set; }
         public string Carrier_Agent { get; set; }
-        //public string ID_Agente { get; set; }
         public string Accounting_info { get; set; }
         public string Departure_airport { get; set; }
         public string Requested_routing { get; set; }
+        public string Optional_shipping_number { get; set; }
         public string Optional_shipping_info { get; set; }
         public string Code_first_carrier { get; set; }
         public string Code_second_carrier { get; set; }
+        public string Airport_Destination_second_carrier { get; set; }
         public string Code_third_carrier { get; set; }
+        public string Airport_Destination_third_carrier { get; set; }
         public string Currency { get; set; }
         public string Payment_methods { get; set; } //Prepaid(PP) or Collect(CC)
         public string Declared_value_carriage { get; set; }

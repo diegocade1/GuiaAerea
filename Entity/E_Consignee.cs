@@ -12,7 +12,7 @@ namespace Entity
         public string Account_Number { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
-        public string Comuna { get; set; }
+        //public string Comuna { get; set; }
         public string Telephone { get; set; }
         public string Email { get; set; }
     }

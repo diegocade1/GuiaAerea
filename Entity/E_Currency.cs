@@ -11,6 +11,6 @@ namespace Entity
         public string ID { get; set; }
         public string Name { get; set; }
         public string Prefix { get; set; }
-        public string Clp_value { get; set; }
+        public double Clp_value { get; set; }
     }
 }

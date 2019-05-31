@@ -8,7 +8,7 @@ namespace Entity
 {
     public class E_Shipper
     {
-        public string ID { get; set; }
+        public int ID { get; set; }
         public string Account_Number { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }

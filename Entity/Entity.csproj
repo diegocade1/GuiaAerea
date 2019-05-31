@@ -49,6 +49,7 @@
     <Compile Include="E_Currency.cs" />
     <Compile Include="E_Guide.cs" />
     <Compile Include="E_Guide_Type.cs" />
+    <Compile Include="E_Product.cs" />
     <Compile Include="E_Shipment_Guide.cs" />
     <Compile Include="E_Shipper.cs" />
     <Compile Include="E_ULD.cs" />

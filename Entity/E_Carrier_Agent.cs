@@ -8,11 +8,13 @@ namespace Entity
 {
     public class E_Carrier_Agent
     {
-        public string ID { get; set; }
+        public int ID { get; set; }
         public string Account_Number { get; set; }
         public string Rut { get; set; }
         public string IATA_Code { get; set; }
         public string Name { get; set; }
+        public string Representante { get; set; }
+        public string Firma_Representante { get; set; }
         public string Address { get; set; }
         public string Comuna { get; set; }
         public string Telephone { get; set; }

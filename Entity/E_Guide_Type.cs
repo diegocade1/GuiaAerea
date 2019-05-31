@@ -8,7 +8,7 @@ namespace Entity
 {
     public class E_Guide_Type
     {
-        public string ID { get; set; }
+        public int ID { get; set; }
         public string Description { get; set; }
     }
 }

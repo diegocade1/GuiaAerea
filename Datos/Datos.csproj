@@ -44,8 +44,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="D_Accounting_Info.cs" />
+    <Compile Include="D_Airline.cs" />
+    <Compile Include="D_Airport.cs" />
+    <Compile Include="D_Carrier_Agent.cs" />
+    <Compile Include="D_Consignee.cs" />
+    <Compile Include="D_Currency.cs" />
+    <Compile Include="D_Guide.cs" />
+    <Compile Include="D_Guide_Type.cs" />
     <Compile Include="D_MySQL.cs" />
-    <Compile Include="D_Shippment Guide.cs" />
+    <Compile Include="D_Shipper.cs" />
+    <Compile Include="D_Shipment _Guide.cs" />
+    <Compile Include="D_ULD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
